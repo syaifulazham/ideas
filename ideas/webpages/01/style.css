@@ -1,0 +1,9 @@
+body{
+    margin: 0;
+    overflow-x: hidden;
+}
+
+canvas{
+    border: 0px solid #f5000000;
+    background: rgba(0, 100, 100, 0.1);
+}
