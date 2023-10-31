@@ -1,9 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Share+Tech+Mono&display=swap');
+
 body{
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+    margin: 65px 0;
     overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #063764;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+p, small {
+    color: #8f8f8f;
+}
+
+p {
+    font-size: 0.9em;
+    line-height: 23px;
+}
+
+h1{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #f1f1f1;
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+    color: #fff;
+    z-index: 999999999;
+}
+
+.brand {
+    display: flex;
+    width: 200px;
+    color: #f1f1f1;
+    background: #063764;
+    margin: 0;
+    padding: 5px 5px 5px 25px;
+    border-top-right-radius: 120px;
+}
+
+.brand-name{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.logo{
+    height: 100%;
+}
+
+.medal-list{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+    width: 100%;
+    font-size: small;
+}
+
+.medal-row{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.winner-name {
+    font-weight: bold;
+}
+
+.medal{
+    height: 35px;
+}
+
+.brand-end::after{
+    content: '';
+    position: absolute;
+    left: -6.1em;
+    top: 50%;
+    transform: translateY(-50%) rotate(20deg);
+    background: #111;
+    width: 40%;
+    height: 140%;
+    box-shadow: 0 0 s0px rgba(0,0,0,0.7);
+}
+
+
+.skewed{
+    display: flex;
+    width: 50em;
+    color: #063764;
+    background: #f1f1f1;
+    border-radius: 8px;
+    margin: 2em 0;
+    box-shadow: 0 0 15px rgba(0,0,0,0.7);
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+    width: 50%;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.text-2{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+    width: 80%;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+.image{
+    width: 50%;
+    height: 16em;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.image-2{
+    width: 20%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.image::before{
+    content: '';
+    position: absolute;
+    left: -6.1em;
+    top: 50%;
+    transform: translateY(-50%) rotate(20deg);
+    background: #f1f1f1;
+    width: 40%;
+    height: 140%;
+    box-shadow: 0 0 s0px rgba(0,0,0,0.7);
+}
+
+.skewed-left .image::before{
+    transform: translateY(-50%) rotate(-20deg);
+    left: initial;
+    right: -6.1em;
+}
+
+.img-box {
+    width: 140%;
+}
+
+.img-box-2 {
+    height: 300px;
 }
 
 canvas{
     border: 0px solid #f5000000;
     background: rgba(0, 100, 100, 0.1);
+}
+
+@media screen and (max-width: 750px) {
+    .skewed {
+        display: block;
+        width: 80vw;
+    }
+
+    .image, .text{
+        width: 100%;
+    }
+
+    .img-box { width: 160%;}
+
+    .skewed .image::before{
+        width: 120%;
+        height: 40%;
+        top: -5em;
+        left: 50%;
+        transform: translateX(-50%) rotate(10deg);
+    }
+
+    .skewed-left .image::before{
+        transform: translateX(-50%) rotate(-10px);
+        top: initial;
+        bottom: -5em;
+    }
+
 }
